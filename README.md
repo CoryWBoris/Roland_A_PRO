@@ -11,7 +11,7 @@
 Enjoy a pause button! This script allows the pause button which is midi CC 27 on the Roland A Pro series to stop and continue where playing just like a pause button.  
 
 How the pause button works:  
-If playing and not recording, this button will pause, and play as expected.
+If playing and not recording, this button will pause, and play as expected.  
 If playing and recording, this button will pause, keeping the recording enabled, and on play, you will still record.
 
 Also, if you want to do this to your own synth, find your synth's MIDI remote script from this repo: https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts/tree/master  
