@@ -16,13 +16,7 @@ from .DeviceNavigationComponent import DeviceNavigationComponent
 from .MixerComponent import MixerComponent
 ENCODER_IDS = (74, 71, 65, 2, 5, 76, 77, 78)
 SLIDER_IDS = (73, 75, 72, 91, 92, 93, 94, 95)
-PAD_ROWS = ([67,
-  69,
-  71,
-  72], [60,
-  62,
-  64,
-  65])
+PAD_ROWS = ([67, 68, 69, 70], [71, 72, 73, 74])
 
 class Roland_A_PRO(ControlSurface):
 
@@ -57,12 +51,20 @@ class Roland_A_PRO(ControlSurface):
         self._pause_button = ButtonElement(True, MIDI_CC_TYPE, 0, 27)
         self._pause_button.add_value_listener(self._toggle_play_state)
 
-    # How to effectively add a pause button to any MIDI Remote Script
+    # How to add a pause button to any MIDI Remote Script
+    # This pause button functionality allows for the recording to be interrupted without disabling recording. Great for shows with long applause and a need to stop between takes
     def _toggle_play_state(self, value):
         if value != 0:  # Ignore button release events
             if self.song().is_playing:
-                self.song().stop_playing()
+                if self.song().record_mode:
+                    # If playing and recording, stop playing and start recording again
+                    self.song().stop_playing()
+                    self.song().record_mode = True
+                else:
+                    # If playing and not recording, stop
+                    self.song().stop_playing()
             else:
+                # If stopped, start where left off
                 self.song().continue_playing()
         
         # end of new stuff
@@ -102,8 +104,7 @@ class Roland_A_PRO(ControlSurface):
         self._encoder_modes.selected_mode = u'device_mode'
         self._encoder_modes.set_enabled(True)
 
-      # Rewrote the method to include an index out of bounds check
-      def _set_send_index(self, index):
+    def _set_send_index(self, index):
         if 0 <= index < len(self._mixer.sends):
             self._mixer.send_index = index
         else:
