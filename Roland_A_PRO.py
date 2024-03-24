@@ -57,7 +57,7 @@ class Roland_A_PRO(ControlSurface):
         self._pause_button = ButtonElement(True, MIDI_CC_TYPE, 0, 27)
         self._pause_button.add_value_listener(self._toggle_play_state)
 
-    # How to add a play button to any MIDI Remote Script
+    # How to effectively add a pause button to any MIDI Remote Script
     def _toggle_play_state(self, value):
         if value != 0:  # Ignore button release events
             if self.song().is_playing:
