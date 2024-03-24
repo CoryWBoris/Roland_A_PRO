@@ -1,14 +1,19 @@
 ## Pause Button Functionality Added To Roland A Pro Series For Ableton
 
-## Steps - Note: these are not the same as the user library's remote scripts. Pay attention carefully to your directory:
+## Steps to install - Note: these are not the same as the user library's remote scripts. Pay attention carefully to your directory:
 1. Go here  
    a.) On Mac: `/Applications/Ableton Live 11/Contents/App-Resources/MIDI Remote Scripts/Roland_A_PRO`  
    b.) On Windows: `C:\ProgramData\Ableton\Live x.x\Resources\MIDI Remote Scripts\Roland_A_PRO`
 3. Rename the Roland_A_PRO.pyc file something like Roland_A_PRO_Original.pyc, and put it in a folder so it is afe.
 4. Replace Roland_A_PRO.pyc in the Roland_A_PRO folder with this Roland_A_PRO.py file
 5. Restart Ableton or open Ableton if not open
+6. Make sure 'Start Playback With Record' is off in Ableton's Preferences | Record Warp Launch section
 
 Enjoy a pause button! This script allows the pause button which is midi CC 27 on the Roland A Pro series to stop and continue where playing just like a pause button.  
+
+How the pause button works:  
+If playing and not recording, this button will pause, and play as expected.
+If playing and recording, this button will pause, keeping the recording enabled, and on play, you will still record.
 
 Also, if you want to do this to your own synth, find your synth's MIDI remote script from this repo: https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts/tree/master  
 I understand this is using MIDI Remote Scripts from Ableton 10.1, but not much has changed and these are more reliable than the ones available on github for Ableton 11. Basically, in order to create the uncompiled python for these scripts, some fine folks have taken the liberty of decompiling the scripts that came with Ableton. GPT can definitely help you answer questions about these libraries if you get stuck.  
