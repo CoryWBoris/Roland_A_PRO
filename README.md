@@ -9,7 +9,8 @@
 
 Enjoy a pause button! This script allows the pause button which is midi CC 27 on the Roland A Pro series to stop and continue where playing just like a pause button.  
 
-Also, if you want to do this to your own synth, just find out what CC number your device's pause button is, or just assign the CC of any button that is a momentary button, not a toggle button, and replace CC 27 in my script with the CC number. The only code you need to add to your default MIDI Remote Script is this:  
+Also, if you want to do this to your own synth, find your synth's MIDI remote script from this repo: https://github.com/gluon/AbletonLive11_MIDIRemoteScripts/tree/main  
+Simply find out what CC number your device's pause button is, or just assign the CC of any button that is a momentary button -not a toggle button- and replace CC 27 in my script with the actual CC number. The only code you need to add to your default MIDI Remote Script is this:  
 
 add to the _create_controls method:  
 
