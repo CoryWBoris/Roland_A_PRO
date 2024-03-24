@@ -28,5 +28,6 @@ and then add this method inside the class of the name of your MIDI Remote Script
             if self.song().is_playing:
                 self.song().stop_playing()
             else:
-                self.song().continue_playing()
+                self.song().continue_playing()  
 
+I also added a MixerComponent.py file to this repo which fixes an index out of bounds bug when replacing the stock MixerComponent.pyc file while also replacing the stock Roland_A_PRO.pyc file with my Roland_A_PRO.py script here.
