@@ -4,7 +4,7 @@
 1. Go here  
    a.) On Mac: `/Applications/Ableton Live 11/Contents/App-Resources/MIDI Remote Scripts/Roland_A_PRO`  
    b.) On Windows: `C:\ProgramData\Ableton\Live x.x\Resources\MIDI Remote Scripts\Roland_A_PRO`
-3. Rename the Roland_A_PRO.pyc file something like Roland_A_PRO_Original.pyc, and put it in a folder so it is afe.
+3. Rename the Roland_A_PRO.pyc file something like Roland_A_PRO_Original.pyc, and put it in a folder so it is safe.
 4. Replace Roland_A_PRO.pyc in the Roland_A_PRO folder with this Roland_A_PRO.py file
 5. Restart Ableton or open Ableton if not open
 
