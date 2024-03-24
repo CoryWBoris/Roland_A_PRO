@@ -19,6 +19,8 @@ I understand this is using MIDI Remote Scripts from Ableton 10.1, but not much h
 
 Simply find out what CC number your device's pause button is, or just assign the CC of any button that is a momentary button -not a toggle button- and replace CC 27 in my script with the actual CC number. The only code you need to add to your default MIDI Remote Script is this:  
 
+While inside the name of the script which matches the name of your folder as it pertains to your specific midi instrument i.e. if you are in the Roland_A_PRO folder, go to the Roland_A_PRO.py file:  
+
 add to the _create_controls method:  
 
         self._pause_button = ButtonElement(True, MIDI_CC_TYPE, 0, 27)
