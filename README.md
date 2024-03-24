@@ -1,6 +1,6 @@
 ## Pause Button Functionality Added To Roland A Pro Series For Ableton
 
-## Steps - Note: these are not the same as user library's remote scrips. Pay attention carefully to your directory:
+## Steps - Note: these are not the same as the user library's remote scripts. Pay attention carefully to your directory:
 1. Go here  
    a.) On Mac: `/Applications/Ableton Live 11/Contents/App-Resources/MIDI Remote Scripts/Roland_A_PRO`  
    b.) On Windows: `C:\ProgramData\Ableton\Live x.x\Resources\MIDI Remote Scripts\Roland_A_PRO`
