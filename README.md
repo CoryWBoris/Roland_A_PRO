@@ -7,7 +7,6 @@
 3. Rename the Roland_A_PRO.pyc file something like Roland_A_PRO_Original.pyc, and put it in a folder so it is afe.
 4. Replace Roland_A_PRO.pyc in the Roland_A_PRO folder with this Roland_A_PRO.py file
 5. Restart Ableton or open Ableton if not open
-6. Make sure 'Start Playback With Record' is off in Ableton's Preferences | Record Warp Launch section
 
 Enjoy a pause button! This script allows the pause button which is midi CC 27 on the Roland A Pro series to stop and continue where playing just like a pause button.  
 
