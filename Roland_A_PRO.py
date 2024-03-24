@@ -102,5 +102,9 @@ class Roland_A_PRO(ControlSurface):
         self._encoder_modes.selected_mode = u'device_mode'
         self._encoder_modes.set_enabled(True)
 
-    def _set_send_index(self, index):
-        self._mixer.send_index = index
+      # Rewrote the method to include an index out of bounds check
+      def _set_send_index(self, index):
+        if 0 <= index < len(self._mixer.sends):
+            self._mixer.send_index = index
+        else:
+            self.log_message("Invalid send index: %d" % index)
