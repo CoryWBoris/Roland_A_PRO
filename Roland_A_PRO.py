@@ -16,7 +16,13 @@ from .DeviceNavigationComponent import DeviceNavigationComponent
 from .MixerComponent import MixerComponent
 ENCODER_IDS = (74, 71, 65, 2, 5, 76, 77, 78)
 SLIDER_IDS = (73, 75, 72, 91, 92, 93, 94, 95)
-PAD_ROWS = ([67, 68, 69, 70], [71, 72, 73, 74])
+PAD_ROWS = ([67,
+  69,
+  71,
+  72], [60,
+  62,
+  64,
+  65])
 
 class Roland_A_PRO(ControlSurface):
 
