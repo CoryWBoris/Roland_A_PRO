@@ -29,14 +29,14 @@ add to the _create_controls method:
         
 and then add this method inside the class of the name of your MIDI Remote Script:  
 
-     def _toggle_play_state(self, value):
+    # How to add a pause button
+    def _toggle_play_state(self, value):
         if value != 0:  # Ignore button release events
             if self.song().is_playing:
                 if self.song().record_mode:
                     # If playing and recording, stop playing and start recording again
                     self.song().stop_playing()
-                    if self.song().start_playing_with_record:
-                        self.song().record_mode = True
+                    self.song().record_mode = True
                 else:
                     # If playing and not recording, stop
                     self.song().stop_playing()
