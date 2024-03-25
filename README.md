@@ -8,7 +8,8 @@
 4. Replace Roland_A_PRO.pyc in the Roland_A_PRO folder with this Roland_A_PRO.py file
 5. Restart Ableton or open Ableton if not open
 
-Enjoy a pause button! This script allows the pause button which is midi CC 27 on the Roland A Pro series to stop and continue where playing just like a pause button.  
+## Use of Pause Button for Roland A Pro Series
+Enjoy a pause button! This script allows the pause button which is midi CC 27 on the Roland A Pro series to stop and continue where playing just like a real pause button! Also, sit back and enjoy some ice cream for the time you saved from hitting the stop button or pressing spacebar and shift!    
 
 How the pause button works:  
 If playing and not recording, this button will pause, and play as expected.  
@@ -28,14 +29,32 @@ add to the _create_controls method:
         
 and then add this method inside the class of the name of your MIDI Remote Script:  
 
-    # How to add a pause button to any MIDI Remote Script
-    def _toggle_play_state(self, value):
+     def _toggle_play_state(self, value):
         if value != 0:  # Ignore button release events
             if self.song().is_playing:
-                self.song().stop_playing()
+                if self.song().record_mode:
+                    # If playing and recording, stop playing and start recording again
+                    self.song().stop_playing()
+                    if self.song().start_playing_with_record:
+                        self.song().record_mode = True
+                else:
+                    # If playing and not recording, stop
+                    self.song().stop_playing()
             else:
-                self.song().continue_playing()  
+                # If stopped, start where left off
+                self.song().continue_playing()
 
 I also added a MixerComponent.py file to this repo which fixes an index out of bounds bug when replacing the stock MixerComponent.pyc file while also replacing the stock Roland_A_PRO.pyc file with my Roland_A_PRO.py script here.
 
 Oh, and I don't have the functionality yet which let's you click anywhere and change where the pause button starts from right now. The pause button appears to be very religious about starting from the last spot you played. So as such, you will have to press play on a new spot if you would like that new spot to be where your pause button starts from.
+
+**Coffees Welcome!**
+- <a href="https://coryboris.gumroad.com/l/TrueAutoColor">TrueAutoColor</a>
+- Paypal: tromboris@gmail.com
+- Venmo: @Cory-Boris
+- Ethereum Address: `0x3f6af994201c17eF1E86ff057AB2a2F6CB0D1f6a`
+
+Thank you! 🔥🥰✌🏻🙏🏻
+
+**Happy Music Making,**  
+-C
