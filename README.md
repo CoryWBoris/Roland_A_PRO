@@ -44,9 +44,11 @@ and then add this method inside the class of the name of your MIDI Remote Script
                 # If stopped, start where left off
                 self.song().continue_playing()
 
-I also added a MixerComponent.py file to this repo which fixes an index out of bounds bug when replacing the stock MixerComponent.pyc file while also replacing the stock Roland_A_PRO.pyc file with my Roland_A_PRO.py script here.
+You may have noticed I also included a MixerComponent.py file to this repo. This is because I fixed an index out of bounds bug which is fixed when replacing the stock MixerComponent.pyc file with this MixerComponent.py file AND replacing the stock Roland_A_PRO.pyc file with my Roland_A_PRO.py script.
 
 Oh, and I don't have the functionality yet which let's you click anywhere and change where the pause button starts from right now. The pause button appears to be very religious about starting from the last spot you played. So as such, you will have to press play on a new spot if you would like that new spot to be where your pause button starts from.
+
+Enjoy being a Pause-Button-Baller®
 
 **Coffees Welcome!**
 - <a href="https://coryboris.gumroad.com/l/TrueAutoColor">TrueAutoColor</a>
