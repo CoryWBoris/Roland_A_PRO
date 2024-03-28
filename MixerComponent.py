@@ -32,7 +32,8 @@ class MixerComponent(MixerComponentBase):
     def track_down_button_pressed(self, button):
         self.set_track_offset(max(0, self._track_offset - 1))
 
-    # This function didn't exist, and led to an index out of bounds error when selecting certain toggle keys on the physical Roland A PRO Series midi keyboard
+    # The previous set_send method led to an index out of bounds error when selecting certain toggle keys on the physical Roland A PRO Series midi keyboard, namely B1 through B4. 
+    # I added a lower and upper bounds condition
     def set_send(self, index, send):
         if 0 <= index < len(self.sends):
             self.sends[index] = send
