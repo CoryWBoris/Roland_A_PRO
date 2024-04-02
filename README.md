@@ -39,6 +39,7 @@ and then add this method inside the class of the name of your MIDI Remote Script
                 if self.song().record_mode:
                     # If playing and recording, stop playing and start recording again
                     self.song().stop_playing()
+                    # the nature of the stop function automatically sets the record mode to False, so we set record mode back to True right away
                     self.song().record_mode = True
                 else:
                     # If playing and not recording, stop
