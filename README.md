@@ -1,4 +1,6 @@
-# Pause Button Functionality Added To Roland A Pro Series For Ableton!
+# Pause Button Functionality Added To Roland A Pro Series For Ableton Live!  
+Compatible with Ableton Live 10+  
+
 ![Stability Badge](https://img.shields.io/badge/-stable-blue)  
 ## Steps to install - Note: these are not the same as the user library's remote scripts. Pay attention carefully to your directory:
 1. Go here  
